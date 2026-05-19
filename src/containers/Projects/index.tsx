@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Title from '../../components/Title';
-import { Card, LinkBotao } from '../../components/Project/style';
+import { Card, LinkBotao } from '../../components/Project/styles';
 import { List } from './styles';
 
 type Repo = {
@@ -10,7 +10,8 @@ type Repo = {
   html_url: string;
 };
 
-const Projects = ({ nomeUsuario = 'seu-usuario-github' }) => {
+const Projects = () => {
+  const nomeUsuario = 'Willsmt';
   const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState<string | null>(null);
@@ -40,7 +41,8 @@ const Projects = ({ nomeUsuario = 'seu-usuario-github' }) => {
         <p style={{ color: 'red' }}>{erro}</p>
       ) : (
         <List>
-          {repos.slice(0, 5).map(({ id, name, language, html_url }) => (
+          {/* REMOVIDO O .slice(0, 5) DAQUI: Agora ele mapeia o array inteiro */}
+          {repos.map(({ id, name, language, html_url }) => (
             <li key={id}>
               <Card>
                 <Title>{name}</Title>

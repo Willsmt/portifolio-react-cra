@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Title from '../Title';
 import Paragrafh from '../Paragraph';
-import { Card, LinkBotao } from './style';
+import { Card, LinkBotao } from './styles';
 
 type Repo = {
   id: number;

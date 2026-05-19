@@ -20,6 +20,19 @@ export const SidebarContainer = styled.div`
   button {
     white-space: nowrap;
   }
+
+  /* 👇 O PULO DO GATO PARA O MOBILE ADICIONADO AQUI 👇 */
+  @media (max-width: 768px) {
+    position: static; /* Remove o sticky para ele se comportar normalmente no topo */
+    border-right: none; /* Remove a borda da direita que não faz sentido no mobile */
+    border-bottom: 1px solid ${(props) => props.theme.corDaBorda}; /* Opcional: adiciona uma borda embaixo se quiser separar do conteúdo */
+
+    align-items: center; /* Centraliza os blocos (avatar, botão, links) no eixo horizontal */
+    text-align: center; /* Centraliza os textos internos (nome, descrição) */
+
+    padding: 24px 0; /* Adiciona um respiro em cima e embaixo */
+    width: 100%; /* Garante que o container ocupe a largura toda da tela */
+  }
 `;
 
 export const Description = styled(P)`
@@ -57,7 +70,7 @@ export const SocialLinks = styled.div`
 export const BotaoTema = styled.button`
   font-size: 12px;
   border-radius: 12px;
-  padding: 10px 20px; /* Aumentado levemente para o texto respirar dentro dele */
+  padding: 10px 20px;
   color: ${(props) => props.theme.corDeFundo};
   font-weight: bold;
   background-color: ${(props) => props.theme.corPrincipal};
@@ -66,7 +79,6 @@ export const BotaoTema = styled.button`
   transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 
-  /* O PULO DO GATO: Impede que o texto "Trocar Tema" quebre em duas linhas */
   white-space: nowrap;
 
   &:hover {

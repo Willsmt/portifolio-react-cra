@@ -1,46 +1,117 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# 🚀 Portfólio - Willians Martins
 
-In the project directory, you can run:
+Este é meu projeto de estudos e portfólio pessoal, desenvolvido com foco em **Atomic Design** e boas práticas de desenvolvimento front-end. O projeto consome a API do GitHub para listar meus repositórios em tempo real e conta com um setup completo de padronização de código.
 
-### `npm start`
+## 📚 Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* **React** (com TypeScript)
+* **Styled-components** (para estilização e gerenciamento de temas)
+* **ESLint + Prettier** (para padronização de código e formatação automática)
+* **Husky** (para hooks de commit automatizados)
+* **EditorConfig** (para consistência de configuração entre diferentes editores)
+* **GitHub API** (integração para listagem dinâmica de projetos)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🧩 Arquitetura
 
-### `npm test`
+O projeto segue a metodologia **Atomic Design** para garantir componentes reutilizáveis e escaláveis:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Atoms:** Componentes básicos e indivisíveis (`Avatar`, `Title`, `Paragraph`, `Botao`).
+* **Molecules:** Combinações simples de átomos (`Sidebar`, `CardItem`).
+* **Organisms:** Blocos mais complexos formados por moléculas (`ProjectsList`).
+* **Templates/Pages:** Estrutura e layout completo da página principal.
 
-### `npm run build`
+## ⚙️ Configuração do Ambiente
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Este projeto já vem 100% configurado para manter o código limpo, consistente e livre de erros antes mesmo de subir para o repositório:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **ESLint + Prettier:** Regras rígidas de linting e formatação automatizada ao salvar.
+* **Husky:** Automatiza a checagem do código. Se houver algum erro de sintaxe ou formatação, o Husky impede o `git commit` até que seja corrigido.
+* **EditorConfig:** Garante que qualquer desenvolvedor que abrir o projeto use a mesma configuração de espaçamento e quebras de linha.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```ini
+root = true
 
-### `npm run eject`
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[*.md]
+trim_trailing_whitespace = false
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## ⚙️ Funcionalidades
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* [x] Alternância dinâmica de temas (Claro / Escuro) via `styled-components`.
+* [x] Sidebar responsiva com informações pessoais, botões de ação e redes sociais.
+* [x] Integração com a API do GitHub com tratamento de erros (404, limite de requisições, loading).
+* [x] Ordenação automática dos projetos por data de atualização recente.
+* [x] Layout totalmente responsivo (Grid no Desktop e adaptado para Mobile).
 
-## Learn More
+## 🚀 Como Rodar o Projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# 1. Clone o repositório
+git clone https://github.com/Willsmt/seu-repositorio.git
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 2. Acesse a pasta do projeto
+cd seu-repositorio
+
+# 3. Instalar as dependências
+npm install
+
+# 4. Rodar em ambiente de desenvolvimento
+npm start
+
+# 5. Build para produção
+npm run build
+
+```
+
+## 🤝 Como Contribuir
+
+Contribuições ajudam a evoluir o ecossistema e são super bem-vindas! Para contribuir, siga os passos abaixo:
+
+1. Faça um **Fork** do projeto.
+2. Crie uma nova **Branch** para sua funcionalidade ou correção:
+```bash
+git checkout -b feature/minha-nova-funcionalidade
+
+```
+
+
+3. Faça suas alterações. O **Husky** rodará o linter automaticamente ao buildar ou commitar. Certifique-se de que não há erros:
+```bash
+npm run lint  # Execute para garantir que está tudo certo
+
+```
+
+
+4. Faça o **Commit** das suas alterações de forma clara:
+```bash
+git commit -m "feat: adiciona novo componente de card"
+
+```
+
+
+5. Envie para o repositório remoto (**Push**):
+```bash
+git push origin feature/minha-nova-funcionalidade
+
+```
+
+
+6. Abra um **Pull Request** detalhando as melhorias que você fez!
+
+## 🔗 Links
+
+* **LinkedIn:** [Click Aqui](https://www.linkedin.com/in/willians-martins-329350329/recent-activity/all/)
+
+---

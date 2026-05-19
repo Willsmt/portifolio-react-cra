@@ -12,6 +12,15 @@ const EstiloGlobal = createGlobalStyle`
 body {
   padding-top: 80px;
   padding-bottom: 20px;
+  background: linear-gradient(
+    135deg,
+    ${(props) => props.theme.corDeFundo} 0%,
+    ${(props) => props.theme.corDeFundoClaro || props.theme.corDeFundo} 100%
+  );
+  color: ${(props) => props.theme.corTexto || props.theme.corPrincipal};
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -30,9 +39,11 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 128px auto;
   column-gap: 56px;
+  row-gap: 32px;
+  padding: 0 16px;
 
   @media (max-width: 768px) {
-    max-width: 80%;
+    max-width: 90%;
     display: block;
   }
 `;

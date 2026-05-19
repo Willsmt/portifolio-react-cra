@@ -4,11 +4,17 @@ import { GithubSecao } from './styles';
 
 const About = () => (
   <section>
-    <Title fontSize={16}>Sobre</Title>
-    <Paragraph type="secundario">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse voluptatibus pariatur
-      architecto quam! Sit consequatur in earum voluptatibus at, laborum dolorum, id vel repudiandae
-      nam quidem corporis quae temporibus deserunt!
+    <Title fontSize={16}>Sobre mim</Title>
+    <Paragraph type="principal">
+      Se eu tivesse que resumir meu perfil em uma palavra, seria disciplina. Com um background
+      robusto em atuação social, desenvolvi uma escuta ativa refinada e uma forte capacidade de
+      resolução de conflitos e gestão de processos. Hoje, canalizo essa energia e resiliência na
+      Engenharia de Software. Atualmente, construo aplicações utilizando JavaScript, Node.js e
+      Python, com forte domínio em automação de tarefas e otimização de front-end. Gosto de projetos
+      desafiadores que exigem pensamento estruturado, atenção aos detalhes (da arquitetura de
+      diretórios à semântica do código) e entrega consistente. Estou sempre em busca de evoluir,
+      dominar novas tecnologias e colaborar com times que queiram impactar o mercado com tecnologia
+      de ponta.
     </Paragraph>
     <GithubSecao>
       <img

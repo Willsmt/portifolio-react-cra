@@ -1,4 +1,4 @@
-Ótima ideia, Willians! Vamos montar um **tutorial completo para configurar um projeto novo com Create React App (CRA) em 2026**, só para estudo e comparação com o fluxo moderno via Vite.
+
 
 ---
 

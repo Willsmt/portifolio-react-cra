@@ -19,7 +19,8 @@ function App() {
     <ThemeProvider theme={useThemeDark ? themeDark : themeLight}>
       <EstiloGlobal />
       <Container>
-        <Sidebar tradeTheme={tradeTheme} />
+        {/* ENVIANDO O ESTADO PARA A SIDEBAR: */}
+        <Sidebar tradeTheme={tradeTheme} isDark={useThemeDark} />
         <main>
           <About />
           <Projects />

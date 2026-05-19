@@ -5,32 +5,25 @@ export const SidebarContainer = styled.div`
   position: sticky;
   top: 80px;
   left: 0;
-  padding: 16px;
   border-right: 1px solid ${(props) => props.theme.corDaBorda};
 
-  /* Garante que todo o conteúdo da Sidebar siga um alinhamento vertical perfeito */
+  /* Faz com que os elementos internos se alinhem à esquerda sem passar da linha */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza horizontalmente todos os filhos */
-  text-align: center; /* Centraliza todos os textos internos */
+  align-items: flex-start;
+  text-align: left;
 
-  /* Estilização para a imagem de Avatar ficar sempre centralizada */
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-
-  @media (max-width: 768px) {
-    position: static;
-    margin-bottom: 40px;
-    border-right: none;
-    border-bottom: 1px solid ${(props) => props.theme.corDaBorda};
-    padding-bottom: 24px;
+  /* Impede o botão e títulos de quebrarem em duas linhas */
+  h1,
+  h2,
+  h3,
+  button {
+    white-space: nowrap;
   }
 `;
 
 export const Description = styled(P)`
-  margin-top: 16px; /* Reduzido um pouco para aproximar do nick do Github */
+  margin-top: 16px;
   margin-bottom: 24px;
   color: ${(props) => props.theme.corSecundaria};
   font-size: 14px;
@@ -40,35 +33,31 @@ export const Description = styled(P)`
 export const SocialLinks = styled.div`
   display: flex;
   gap: 16px;
-  margin-bottom: 32px; /* Espaço levemente maior antes do botão */
-  justify-content: center; /* Garante centralização tanto no desktop quanto mobile */
+  margin-bottom: 24px;
+  justify-content: flex-start; /* Alinhado à esquerda no desktop */
 
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  a img,
-  a svg {
-    width: 28px; /* Aumentado sutilmente para melhor clique/visualização */
-    height: 28px;
+  a img {
+    width: 24px;
+    height: 24px;
     transition:
       transform 0.3s ease,
       opacity 0.3s ease;
   }
 
-  a img:hover,
-  a svg:hover {
+  a img:hover {
     transform: scale(1.2);
     opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center; /* Centraliza os ícones no mobile */
   }
 `;
 
 export const BotaoTema = styled.button`
   font-size: 12px;
   border-radius: 12px;
-  padding: 10px 20px; /* Ajuste sutil no padding para o botão respirar melhor */
+  padding: 10px 20px; /* Aumentado levemente para o texto respirar dentro dele */
   color: ${(props) => props.theme.corDeFundo};
   font-weight: bold;
   background-color: ${(props) => props.theme.corPrincipal};
@@ -76,8 +65,9 @@ export const BotaoTema = styled.button`
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  display: inline-block;
-  margin: 0 auto; /* Força o alinhamento central em blocos puros */
+
+  /* O PULO DO GATO: Impede que o texto "Trocar Tema" quebre em duas linhas */
+  white-space: nowrap;
 
   &:hover {
     background-color: ${(props) => props.theme.corDeFundoHover};
